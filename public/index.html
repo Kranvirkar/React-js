@@ -5,11 +5,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
+    <style>
+        .netflix-back {
+            background-image: url("banner.jpg");
+            background-size: cover;
+            color: white;
+            height: 768px;
+        }
+
+        section {
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 768px;
+        }
+
+        .brand-title {
+            font-size: 20px;
+            color: red;
+            font-weight: 550;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 50px;
+        }
+
+        .register-box {
+            width: 800px;
+        }
+
+        register-box p {
+            font-size: 20px;
+        }
+    </style>
     <script src="../node_modules/react/umd/react.development.js"></script>
     <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="../node_modules/@babel/standalone/babel.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/jsx">
+        function HeaderComponent(){
+            return(
+                <header className="p-3 d-flex justify-content-between">
+                    <div className="brand-title">NETFLIX</div>
+                    <div className="d-flex">
+                    <div className="dropdown me-3">
+                        <button className="btn btn-dark dropdown-toggle">
+                            <span className="bi bi-globe"></span>
+                            Language
+                        </button>
+                    </div>
+                    <div>
+                        <button className="btn btn-danger">
+                            SignIn
+                        </button>
+                    </div>    
+                    </div>
+                </header>    
+            ) 
+        }
+        function RegisterComponent(){
+            return (
+                <div className="register-box">
+                    <p>Ready to watch? Enter your email to create or restart your membership. </p>
+                    <div className="input-group input-group-lg">
+                        <input type="email" placeholder="Your email address" className="form-control"/>
+                        <button className="btn btn-danger">
+                            Get Started<span className="bi bi-chevron-right"></span>
+                        </button>
+                    </div>
+                </div>
+            )
+        }
+
+        function MainComponent(){
+            return (
+                <main>
+                    <div>
+                        <h1>Unlimited movies, TV shows and more.</h1>
+                        <p>Watch anywhere. Cancel anytime.</p>
+                        <RegisterComponent/>
+                    </div>  
+                </main>    
+            )
+        }
+
+        function IndexComponent(){
+            return (
+                <div className="netflix-back">
+                    <section>
+                        <HeaderComponent/>
+                        <MainComponent/>
+                    </section>  
+                </div>
+            )
+        } 
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<IndexComponent/> )
+    </script>
 </head>
 
 <body>
