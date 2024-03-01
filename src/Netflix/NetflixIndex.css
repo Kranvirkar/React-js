@@ -1,0 +1,37 @@
+.netflix-back {
+    background-image: url("../../public/banner.jpg");
+    background-size: cover;
+    color: white;
+    height: 768px;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 768px;
+}
+
+.brand-title {
+    font-size: 20px;
+    color: red;
+    font-weight: 550;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 50px;
+}
+
+.register-box {
+    width: 800px;
+}
+
+register-box p {
+    font-size: 20px;
+}
