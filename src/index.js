@@ -2,15 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { IndexComponent } from './Netflix/NetflixIndexComponent';
+//import { IndexComponent } from './Netflix/NetflixIndexComponent';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+import { DataBindingIndexComponent } from './components/01-data-binding/DataBindingIndexComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <IndexComponent/>
+    {/* <IndexComponent/> */}
+    <DataBindingIndexComponent/>
   </React.StrictMode>
 );
 
