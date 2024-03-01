@@ -70,9 +70,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-npm i react --save 
-npm i react-dom --save 
-npm i @babel/standalone 
-npm i bootstrap --save 
-npm i bootstrap-icons --save 
+```bash
+npm i react --save
+npm i react-dom --save
+npm i @babel/standalone
+npm i bootstrap --save
+npm i bootstrap-icons --save
 npm i jquery --save
